@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/js/htmx.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+    <script type="text/javascript">
+        hljs.highlightAll();
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <h1>hx-target属性</h1>
+        <div>
+            <ul>
+                <li>
+                    レスポンスをリクエスト元の要素とは別の要素にロードすることができる。
+                </li>
+                <li>
+                    CSSセレクタで指定する。
+                </li>
+            </ul>
+        </div>
+        <h2>例</h2>
+        <h3>コード</h3>
+        <pre>
+            <code class="language-html">
+                &lt;input type="text" name="q"
+                    hx-get="/trigger_delay"
+                    hx-trigger="keyup delay:500ms changed"
+                    hx-target="#search-results"
+                    placeholder="Search..."
+                &gt;
+                &lt;div id="search-results"&gt;&lt;/div&gt;
+            </code>
+        </pre>
+        <h3>実物</h3>
+        <input type="text" name="q"
+            hx-get="/trigger_delay"
+            hx-trigger="keyup delay:500ms changed"
+            hx-target="#search-results"
+            placeholder="Search..."
+        >
+        <div id="search-results"></div>
+    </main>
+</body>
+</html>

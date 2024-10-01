@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/js/htmx.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+    <script type="text/javascript">
+        hljs.highlightAll();
+    </script>
+    <link href="/css/output.css" rel="stylesheet">
+    <title>hx-trigger</title>
+</head>
+<body>
+    <main class="min-h-screen max-w-5xl mx-auto divide-y-4">
+        <section class="py-8 space-y-4">
+        <h1 class="text-3xl">hx-trigger属性</h1>
+        <ul class="list-disc pl-6">
+            <li>
+                click
+            </li>
+            <li>
+                change
+            </li>
+            <li>
+                mouseover
+            </li>
+            <li>
+                mouseenter
+            </li>
+            <li>
+                focus
+            </li>
+        </ul>
+        </section>
+        <section class="py-8">
+            <h2 class="text-2xl">mouseenterの例</h2>
+            <h3 class="text-xl">コード</h3>
+            <pre>
+                <code class="language-html">
+                    &lt;div hx-post="/mouse_entered"
+                        hx-trigger="mouseenter"
+                    &gt;
+                        Here Mouse, Mouse!
+                    &lt;/div&gt;
+                </code>
+            </pre>
+            <h3 class="text-xl">実物</h3>
+            <div class="flex flex-col justify-center items-center">
+                <div hx-post="/mouse_entered"
+                    hx-trigger="mouseenter"
+                    class="bg-blue-500 hover:bg-blue-700 text-white text-center font-bold py-2 px-4 rounded w-64 h-16"
+                >
+                    Here Mouse, Mouse!
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

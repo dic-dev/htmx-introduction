@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/js/htmx.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+    <script type="text/javascript">
+        hljs.highlightAll();
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <h1>HTMXのコア属性</h1>
+        <div>
+            <ul>
+                <li>
+                    hx-get
+                </li>
+                <li>
+                    hx-post
+                </li>
+                <li>
+                    hx-put
+                </li>
+                <li>
+                    hx-patch
+                </li>
+                <li>
+                    hx-delete
+                </li>
+            </ul>
+        </div>
+        <h2>POSTの例</h2>
+        <h3>コード</h3>
+        <pre>
+            <code class="language-html">
+                &lt;button hx-post="/clicked"
+                    hx-trigger="click"
+                    hx-swap="innerHTML"
+                &gt;
+                    Click Me!
+                &lt;/button&gt;
+            </code>
+        </pre>
+        <h3>実物</h3>
+        <button hx-post="/clicked"
+            hx-trigger="click"
+            hx-swap="innerHTML"
+        >
+            Click Me!
+        </button>
+    </main>
+</body>
+</html>

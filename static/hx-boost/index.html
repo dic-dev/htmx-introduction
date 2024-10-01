@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/js/htmx.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+    <script type="text/javascript">
+        hljs.highlightAll();
+    </script>
+    <link href="/css/output.css" rel="stylesheet">
+    <title>hx-boost</title>
+</head>
+<body>
+    <main class="min-h-screen max-w-5xl mx-auto divide-y-4">
+        <h1 class="text-3xl">hx-boost</h1>
+        <section class="py-8 space-y-4">
+            <h2 class="text-2xl">通常の遷移</h2>
+            <h3 class="text-xl">コード</h3>
+            <pre>
+                <code class="language-html">
+                    &lt;div&gt;
+                        &lt;a href="/"&gt;Top&lt;/a&gt;
+                    &lt;/div&gt;
+                </code>
+            </pre>
+            <h3 class="text-xl">実物</h3>
+            <div class="flex flex-col justify-center items-center">
+                <a href="/" class="block text-xl text-blue-500 hover:text-blue-200">Top</a>
+            </div>
+        </section>
+
+        <section class="py-8 space-y-4">
+            <h2 class="text-2xl">hx-boost</h2>
+            <h3 class="text-xl">コード</h3>
+            <pre>
+                <code class="language-html">
+                    &lt;div hx-boost="true"&gt;
+                        &lt;a href="/"&gt;Top&lt;/a&gt;
+                    &lt;/div&gt;
+                </code>
+            </pre>
+            <h3 class="text-xl">実物</h3>
+            <div hx-boost="true" class="flex flex-col justify-center items-center">
+                <a href="/" class="block text-xl text-blue-500 hover:text-blue-200">Top</a>
+            </div>
+        </section>
+
+        <section class="py-8 space-y-4">
+            <h2 class="text-2xl">hx-boost(URLそのまま)</h2>
+            <h3 class="text-xl">コード</h3>
+            <pre>
+                <code class="language-html">
+                    &lt;div hx-boost="true"
+                        hx-push-url="false"
+                    &gt;
+                        &lt;a href="/"&gt;Top&lt;/a&gt;
+                    &lt;/div&gt;
+                </code>
+            </pre>
+            <h3 class="text-xl">実物</h3>
+            <div hx-boost="true"
+                hx-push-url="false"
+                class="flex flex-col justify-center items-center"
+            >
+                <a href="/" class="block text-xl text-blue-500 hover:text-blue-200">Top</a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
